@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--daisy ui link-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
-   <h1>hi</h1> 
+    <header class="container px-4 lg:px-16 mt-5">
+        <!--navbar start=======================================================-->
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+              <a class="btn btn-ghost text-2xl font-bold">ReTro</a>
+            </div>
+            <div class="flex gap-4">
+                <div class="tooltip bg-[#0307121A] cursor-pointer p-2 rounded-full " data-tip="Home">
+                    <img class="w-5 " src="images/home.png" alt="">
+                  </div>
+                  <div class="tooltip bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Note">
+                    <img class="w-5 " src="images/note.png" alt="">
+                  </div>
+                  <div class="tooltip bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Contact">
+                    <img class="w-5 " src="images/contact.png" alt="">
+                  </div>
+                  <div class="tooltip bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Flag">
+                    <img class="w-5 " src="images/flag.png" alt="">
+                  </div>
+                <button class="btn bg-[#797DFC] text-white font-semibold">Sign In</button>
+            </div>
+          </div>
+          <!--navbar end======================================================================-->
+    </header>
+    <main class="container px-4 lg:px-16">
+        <!--banner section start======================================================-->
+        <section class="my-6">
+            <div class="bg-[url('./images/bgbanner.png')] min-h-[90vh] bg-no-repeat bg-bottom rounded-xl bg-[#12132D]">
+              <!--container=======================-->
+               <div class="flex flex-col lg:flex-row justify-evenly items-center h-screen ">
+                 <!--left side===============start-->
+                 <div class="space-y-4  px-4">
+                    <p class="text-3xl lg:text-6xl font-extrabold text-white lg:w-[30rem] ">Welcome to the <span class="text-[#797DFC]">ReTro</span> Forum</p>
+                    <p class="text-sm text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum coffee mug!</p>
+                     <div class="gap-0 bg-white lg:w-96 flex justify-between py-1 px-2 rounded-full">
+                        <input id="search-field" class="p-3 flex-1 outline-none rounded-full" type="text" placeholder="Search here anything">
+                        <button id="search-button" class="bg-[#797DFC] text-white py-2 px-6 text-lg  rounded-full">Search</button>
+                     </div>
+                </div>
+            <!--left side end================-->
+            <!--right side start=====================-->
+                <div class="bg-white p-10 rounded-2xl space-y-4 ">
+                   <p class="text-[#12132DCC] flex  w-full justify-between gap-5"><span>Registered Users</span> <span>01</span></p>
+                   <p class="text-[#12132DCC] flex  w-full justify-between"><span>Forum</span> <span>05</span></p>
+                   <p class="text-[#12132DCC] flex  w-full justify-between"><span>Topics</span> <span>01</span></p>
+                   <p class="text-[#12132DCC] flex  w-full justify-between"><span>Replies</span> <span>01</span></p>
+                </div>
+            <!--right side end========================-->
+               </div>
+
+            </div>
+        </section>
+        <!--banner section end=============================================================-->
+
+        <!--Let’s Discuss section start======================================================-->
+        
+        <!--Let’s Discuss section end=========================================================-->
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
