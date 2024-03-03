@@ -72,67 +72,72 @@
             </p>
             <!--dynamic card container========================================-->
             <div class="flex gap-10 flex-col lg:flex-row">
-                <!--left side card start===================================-->
-                <div class="card card-side bg-[#797DFC] shadow-xl  p-8 gap-2">
-                  <div class="avatar w-16 h-16 rounded-full relative ">
-                    <div class="w-16 h-16 rounded-full">
-                      <img class="w-5 h-5" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                    
-                    </div>
-                      <p class="bg-[#10B981] rounded-full w-3 h-3 absolute left-12 top-1"></p>
-                      <p class="bg-[#FF3434] rounded-full w-3 h-3 absolute left-12 top-1 hidden"></p>
-                  </div>
-                    <div class="">
-                      <div class="space-y-2 mb-3">
-                        <div class="flex gap-4">
-                          <p class="text-sm text-[#12132DCC]"># Music</p>
-                          <p class="text-sm text-[#12132DCC]">Author : <span>Awlad hossain</span></p>
-                        </div>
-                        <h2 class="card-title title-[#12132D] font-bold">10 Kids Unaware of Their Halloween Costume</h2>
-                        <p class="text-[#12132D99] text-sm">
-                          It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative
-                        </p>
-                      </div>
-                      <!--second poss-================================-->
-                   <div class="flex justify-between border-t border-dotted py-2 border-t-[#12132D40] ">
-                    <!--left side icon start======================================================-->
-                    <div class="flex gap-5 lg:gap-10  flex-1">
-                      <p class="space-x-3"><img class="inline" src="images/comment.png" alt=""><span class="text-sm text-[#12132D99]">560</span></p>
-                      <p class="space-x-3"><img class="inline" src="images/eye.png" alt=""><span class="text-sm text-[#12132D99]">1,568</span></p>
-                      <p class="space-x-3"><img class="inline" src="images/time (1).png" alt=""><span class="text-sm text-[#12132D99]"><span>5</span> min</span></p>
-                      <!--left side icon end========================================================-->
-                   </div>
-                   <!--right side icon start ====================================================-->
-                   <div class="">
-                    <img class="bg-white rounded-full" src="images/email.png" alt="">
-                   </div>
-                   <!--right side icon  end======================================================-->
-                   </div>
-                    </div>
-                  </div>
+              <!--append div==========================================-->
+              <div id="card-container" class="flex-1">
+                          <!--left side card start===================================-->
+                          <!-- <div class="card card-side bg-[#797DFC] shadow-xl flex flex-col lg:flex-row  p-8 gap-2">
+                            <div class="avatar w-16 h-16 rounded-full relative ">
+                              <div class="w-16 h-16 rounded-full">
+                                <img class="w-5 h-5" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                              
+                              </div>
+                                <p class="bg-[#10B981] rounded-full w-3 h-3 absolute left-12 top-1"></p>
+                                <p class="bg-[#FF3434] rounded-full w-3 h-3 absolute left-12 top-1 hidden"></p>
+                            </div>
+                              <div class="w-full">
+                                <div class="space-y-2 mb-3">
+                                  <div class="flex gap-4">
+                                    <p class="text-sm text-[#12132DCC]"># <span>Music</span></p>
+                                    <p class="text-sm text-[#12132DCC]">Author : <span>Awlad hossain</span></p>
+                                  </div>
+                                  <h2 class="card-title title-[#12132D] font-bold">10 Kids Unaware of Their Halloween Costume</h2>
+                                  <p class="text-[#12132D99] text-sm">
+                                    It’s one thing to subject yourself to ha Halloween costume 
+                                  </p>
+                                </div>
+                               
+                             <div class="flex flex-col lg:flex-row justify-between border-t border-dotted py-2 border-t-[#12132D40]  w-full">
+                            
+                              <div class="flex gap-2 lg:gap-10  flex-1">
+                                <p class="space-x-3"><img class="inline" src="images/comment.png" alt=""><span class="text-sm text-[#12132D99]">560</span></p>
+                                <p class="space-x-3"><img class="inline" src="images/eye.png" alt=""><span class="text-sm text-[#12132D99]">1,568</span></p>
+                                <p class="space-x-3"><img class="inline" src="images/time (1).png" alt=""><span class="text-sm text-[#12132D99]"><span>5</span> min</span></p>
+                                
+                             </div>
+                            
+                             <div class="mt-2 lg:mt-0  rounded-full">
+                              <img class="bg-white rounded-full cursor-pointer" src="images/email.png" alt="">
+                             </div>
+                          
+                             </div>
+                              </div>
+                            </div> -->
+              </div>
                 <!--left side card end======================================-->
                 <!--right side output start =================================-->
                <div>
-                <div class="flex-1 bg-[#12132D0D] p-5 rounded-xl">
+                <div class="flex-1 bg-[#12132D0D] p-5 rounded-xl  lg:w-96">
                   <!--title and mark as read==================================start-->
                   <div class="flex justify-between mb-3">
                     <p class="text-md font-bold text-[#12132D]">Title</p>
-                    <p class="space-x-2"><img class="inline" src="images/mark.png" alt=""><span>Mark as read (<span>4</span>)</span></p>
+                    <p class="space-x-2"><img class="inline" src="images/mark.png" alt=""><span>Mark as read (<span id="count-title">0</span>)</span></p>
                   </div>
                   <!--title and mark as read end=========================================-->
 
                   <!--dynamic title and mark as read start==============================-->
-                  <div class="flex gap- bg-white p-2 rounded-xl ">
-                   <div class="flex-1">
-                    <p class="text-sm text-[#12132D]">
-                      10 Kids Unaware of Their Halloween Costume
-                    </p>
-                   </div>
-                   <div class=" ">
-                    <p class="space-x-1  flex items-center"><img class="inline" src="images/eye.png" alt=""><span class="text-sm text-[#12132D99]">1,568</span></p>
-                   </div>
-
-                  </div>
+                <div id="title-container" class=" ">
+                  <!-- <div class="flex gap-4 bg-white p-2 rounded-xl ">
+                    <div class="">
+                     <p  class="text-sm text-[#12132D]">
+                       10 Kids Unaware of Their Halloween Costume
+                     </p>
+                    </div>
+                    <div class="flex-1">
+                     <p class="space-x-1  flex items-center"><img class="inline" src="images/eye.png" alt=""><span class="text-sm text-[#12132D99]">1,568</span></p>
+                    </div>
+ 
+                   </div> -->
+                </div>
                   <!--dynamic title and mark as read end================================-->
                 </div>
                </div>
@@ -144,5 +149,7 @@
     <footer>
 
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
