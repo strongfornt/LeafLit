@@ -19,7 +19,7 @@ const allData = async () => {
 
     div.className = `mb-5  rounded-2xl`;
     div.innerHTML = `
-        <div class="card card-side  shadow-xl flex flex-col lg:flex-row  p-8 gap-2 bg-[#F3F3F5] ">
+        <div class="card card-side  shadow-xl flex   p-8 gap-2 bg-[#F3F3F5] ">
         <div class="avatar w-16 h-16 rounded-full relative ">
           <div class="w-16 h-16 rounded-full">
             <img class="w-5 h-5" src="${post.image}" />
@@ -66,7 +66,7 @@ const allData = async () => {
             <!--left side icon end========================================================-->
          </div>
          <!--right side icon start ====================================================-->
-         <div class="mt-2 lg:mt-0  rounded-full">
+         <div class="mt-2 lg:mt-0 flex justify-end rounded-full">
           <img onClick="massageButton(&quot;${post.title}&quot;, ${
       post.view_count
     })" id="massage-icon" class="bg-white rounded-full cursor-pointer" src="images/email.png" alt="">
@@ -201,6 +201,7 @@ const massageButton = (title, view_count) => {
 const loadingSpinner = (isLoading) => {
   if (isLoading) {
     loadSpinner.classList.remove("hidden");
+    cardContainer.innerText=""
   } else {
     loadSpinner.classList.add("hidden");
   }
@@ -229,7 +230,7 @@ data.forEach(element => {
         <figure class="h-56 "><img class="h-full w-full rounded-xl" src="${element.cover_image}" />
         </figure>
         <div class=" pt-3">
-        <div class="space-y-2 mb-2">
+        <div class="space-y-2 ">
           <div class="flex gap-2">
             <img src="images/bag.png" alt="">
             <span class="text-[#12132D99] text-sm">${element.author?.posted_date||"No publish date"}</span>
@@ -237,7 +238,7 @@ data.forEach(element => {
           <p class="text-lg text-[#12132D] font-semibold">
            ${element.title}
           </p>
-          <p class="text-sm text-[#12132D99]">
+          <p class="text-sm text-[#12132D99] h-20 ">
             ${element.description}
           </p>
         </div>
