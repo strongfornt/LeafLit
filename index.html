@@ -1,89 +1,139 @@
 <!DOCTYPE html>
 <html data-theme="light" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!--daisy ui link-->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
     <header class="container px-4 lg:px-16 mt-3">
-        <!--navbar start=======================================================-->
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-              <a class="btn btn-ghost text-2xl font-bold">ReTro</a>
-            </div>
-            <div class="flex gap-4">
-                <div class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full " data-tip="Home">
-                    <img class="w-5 " src="images/home.png" alt="">
-                  </div>
-                  <div class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Note">
-                    <img class="w-5 " src="images/note.png" alt="">
-                  </div>
-                  <div class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Contact">
-                    <img class="w-5 " src="images/contact.png" alt="">
-                  </div>
-                  <div class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Flag">
-                    <img class="w-5 " src="images/flag.png" alt="">
-                  </div>
-                <button class="btn bg-[#797DFC] text-white font-semibold">Sign In</button>
-            </div>
+      <!--navbar start=======================================================-->
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-2xl font-bold">ReTro</a>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full"
+            data-tip="Home"
+          >
+            <img class="w-5" src="images/home.png" alt="" />
           </div>
-          <!--navbar end======================================================================-->
+          <div
+            class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full"
+            data-tip="Note"
+          >
+            <img class="w-5" src="images/note.png" alt="" />
+          </div>
+          <div
+            class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full"
+            data-tip="Contact"
+          >
+            <img class="w-5" src="images/contact.png" alt="" />
+          </div>
+          <div
+            class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full"
+            data-tip="Flag"
+          >
+            <img class="w-5" src="images/flag.png" alt="" />
+          </div>
+          <button class="btn bg-[#797DFC] text-white font-semibold">
+            Sign In
+          </button>
+        </div>
+      </div>
+      <!--navbar end======================================================================-->
     </header>
     <main class="container px-4 lg:px-16">
-        <!--banner section start======================================================-->
-        <section class="my-7">
-            <div class="bg-[url('./images/bgbanner.png')] min-h-[90vh] bg-no-repeat bg-bottom rounded-xl bg-[#12132D]">
-              <!--container=======================-->
-               <div class="flex flex-col lg:flex-row justify-evenly items-center h-screen ">
-                 <!--left side===============start-->
-                 <div class="space-y-4  px-4">
-                    <p class="text-3xl lg:text-6xl font-extrabold text-white lg:w-[30rem] ">Welcome to the <span class="text-[#797DFC]">ReTro</span> Forum</p>
-                    <p class="text-sm text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum coffee mug!</p>
-                     <div class="gap-0 bg-white lg:w-96 flex justify-between py-1 px-2 rounded-full">
-                        <input id="search-field" class="p-3 flex-1 outline-none rounded-full" type="text" placeholder="Search here anything">
-                        <button id="search-button" class="bg-[#797DFC] text-white py-2 px-6 text-lg  rounded-full">Search</button>
-                     </div>
-                </div>
+      <!--banner section start======================================================-->
+      <section class="my-7">
+        <div
+          class="bg-[url('./images/bgbanner.png')] min-h-[90vh] bg-no-repeat bg-bottom rounded-xl bg-[#12132D]"
+        >
+          <!--container=======================-->
+          <div
+            class="flex flex-col lg:flex-row justify-evenly items-center min-h-[90vh]"
+          >
+            <!--left side===============start-->
+            <div class="space-y-4 px-4">
+              <p
+                class="text-3xl lg:text-6xl font-extrabold text-white lg:w-[30rem]"
+              >
+                Welcome to the <span class="text-[#797DFC]">ReTro</span> Forum
+              </p>
+              <p class="text-sm text-[#FFFFFFCC]">
+                Share your favorite opinion and win and wp forum coffee mug!
+              </p>
+              <div
+                class="gap-0 bg-white lg:w-96 flex justify-between py-1 px-2 rounded-full"
+              >
+                <input
+                  id="search-field"
+                  class="p-3 flex-1 outline-none rounded-full"
+                  type="text"
+                  placeholder="Search here anything"
+                />
+                <button
+                  id="search-button"
+                  class="bg-[#797DFC] font-bold text-white py-2 px-6 text-lg rounded-full duration-500 hover:bg-[#FFFFFFCC] hover:text-[#797DFC]"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
             <!--left side end================-->
             <!--right side start=====================-->
-                <div class="bg-white p-10 rounded-2xl space-y-4 ">
-                   <p class="text-[#12132DCC] flex  w-full justify-between gap-5"><span>Registered Users</span> <span>01</span></p>
-                   <p class="text-[#12132DCC] flex  w-full justify-between"><span>Forum</span> <span>05</span></p>
-                   <p class="text-[#12132DCC] flex  w-full justify-between"><span>Topics</span> <span>01</span></p>
-                   <p class="text-[#12132DCC] flex  w-full justify-between"><span>Replies</span> <span>01</span></p>
-                </div>
+            <div class="bg-white p-10 rounded-2xl space-y-4">
+              <p class="text-[#12132DCC] flex w-full justify-between gap-5">
+                <span>Registered Users</span> <span>01</span>
+              </p>
+              <p class="text-[#12132DCC] flex w-full justify-between">
+                <span>Forum</span> <span>05</span>
+              </p>
+              <p class="text-[#12132DCC] flex w-full justify-between">
+                <span>Topics</span> <span>01</span>
+              </p>
+              <p class="text-[#12132DCC] flex w-full justify-between">
+                <span>Replies</span> <span>01</span>
+              </p>
+            </div>
             <!--right side end========================-->
-               </div>
+          </div>
+        </div>
+      </section>
+      <!--banner section end=============================================================-->
 
-            </div>
-        </section>
-        <!--banner section end=============================================================-->
-
-        <!--Let’s Discuss section start======================================================-->
-         <section class="my-24">
-            <p class="text-5xl font-extrabold text-[#12132D] text-center mb-5">Let’s Discuss</p>
-            <p class="text-sm text-[#12132D99] lg:w-3/5  text-center mx-auto mb-10">
-                Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .
-            </p>
-            <!--spinner start====================================-->
-            <div id="spinner1" class="flex items-center   lg:w-3/4 justify-center hidden">
-              <span class="loading loading-dots loading-lg "></span>
-            </div>
-            <!--spinner end===========================================-->
-            <!-- <div id="no-data" class=" flex items-center w-3/4 justify-center hidden "><p class="text-4xl font-bold">No data Available</p></div> -->
-            <!--dynamic card container========================================-->
-            <div class="flex gap-10 flex-col lg:flex-row">
-             
-
-              <!--append div==========================================-->
-              <div id="card-container" class="flex-1 ">
-                          <!--left side card start===================================-->
-                          <!-- <div class="card card-side bg-[#797DFC] shadow-xl flex flex-col lg:flex-row  p-8 gap-2">
+      <!--Let’s Discuss section start======================================================-->
+      <section class="my-24">
+        <p class="text-5xl font-extrabold text-[#12132D] text-center mb-5">
+          Let’s Discuss
+        </p>
+        <p class="text-sm text-[#12132D99] lg:w-3/5 text-center mx-auto mb-10">
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+        <!--spinner start====================================-->
+        <div
+          id="spinner1"
+          class="flex items-center lg:w-3/4 justify-center hidden"
+        >
+          <span class="loading loading-dots loading-lg"></span>
+        </div>
+        <!--spinner end===========================================-->
+        <!-- <div id="no-data" class=" flex items-center w-3/4 justify-center hidden "><p class="text-4xl font-bold">No data Available</p></div> -->
+        <!--dynamic card container========================================-->
+        <div class="flex gap-10 flex-col lg:flex-row">
+          <!--append div==========================================-->
+          <div id="card-container" class="flex-1">
+            <!--left side card start===================================-->
+            <!-- <div class="card card-side bg-[#797DFC] shadow-xl flex flex-col lg:flex-row  p-8 gap-2">
                             <div class="avatar w-16 h-16 rounded-full relative ">
                               <div class="w-16 h-16 rounded-full">
                                 <img class="w-5 h-5" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
@@ -120,24 +170,26 @@
                              </div>
                               </div>
                             </div> -->
-             
-              
-              </div>
-            
-                <!--left side card end======================================-->
-                <!--right side output start =================================-->
-               <div>
-                <div class="flex-1 bg-[#12132D0D] p-5 rounded-xl  lg:w-96">
-                  <!--title and mark as read==================================start-->
-                  <div class="flex justify-between mb-3">
-                    <p class="text-md font-bold text-[#12132D]">Title</p>
-                    <p class="space-x-2"><img class="inline" src="images/mark.png" alt=""><span>Mark as read (<span id="count-title">0</span>)</span></p>
-                  </div>
-                  <!--title and mark as read end=========================================-->
+          </div>
 
-                  <!--dynamic title and mark as read start==============================-->
-                <div id="title-container" class=" ">
-                  <!-- <div class="flex gap-4 bg-white p-2 rounded-xl ">
+          <!--left side card end======================================-->
+          <!--right side output start =================================-->
+          <div>
+            <div class="flex-1 bg-[#12132D0D] p-5 rounded-xl lg:w-96">
+              <!--title and mark as read==================================start-->
+              <div class="flex justify-between mb-3">
+                <p class="text-md font-bold text-[#12132D]">Title</p>
+                <p class="space-x-2">
+                  <img class="inline" src="images/mark.png" alt="" /><span
+                    >Mark as read (<span id="count-title">0</span>)</span
+                  >
+                </p>
+              </div>
+              <!--title and mark as read end=========================================-->
+
+              <!--dynamic title and mark as read start==============================-->
+              <div id="title-container" class=" ">
+                <!-- <div class="flex gap-4 bg-white p-2 rounded-xl ">
                     <div class="">
                      <p  class="text-sm text-[#12132D]">
                        10 Kids Unaware of Their Halloween Costume
@@ -148,42 +200,68 @@
                     </div>
  
                    </div> -->
-                </div>
-                  <!--dynamic title and mark as read end================================-->
-                </div>
-               </div>
-                <!--right side output end=========================================-->
-            </div>
-           
-         </section>
-        <!--Let’s Discuss section end=========================================================-->
-
-        <!--join our forum section====start-------------========================================-->
-        <section class="my-24">
-          <div class="bg-[url('./images/joinforum.png')] min-h-[80vh] bg-no-repeat bg-right rounded-xl bg-[#12132D]">
-            <!--container=======================-->
-             <div class="flex justify-center items-center min-h-[80vh]  ">
-               <!--left side===============start-->
-               <div class="space-y-4  px-4">
-                  <p class="text-3xl lg:text-6xl font-extrabold text-white lg:w-[30rem] ">Join Our Forum</p>
-                  <p class="text-sm text-[#FFFFFFCC] lg:w-3/4 ">
-                    Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. 
-                  </p>
-                  <button id="search-button" class="bg-[#797DFC] text-white py-2 px-6 text-lg  rounded-full">Registered Now</button>
-                   
               </div>
-          <!--left side end================-->
-       
-             </div>
-
+              <!--dynamic title and mark as read end================================-->
+            </div>
           </div>
-        </section>
-        <!--join our forum section end=========================================================-->
+          <!--right side output end=========================================-->
+        </div>
+      </section>
+      <!--Let’s Discuss section end=========================================================-->
+
+      <!--join our forum section====start-------------========================================-->
+      <section class="my-24">
+        <div
+          class="bg-[url('./images/joinforum.png')] min-h-[80vh] bg-no-repeat bg-right rounded-xl bg-[#12132D]"
+        >
+          <!--container=======================-->
+          <div class="flex justify-center items-center min-h-[80vh]">
+            <!--left side===============start-->
+            <div class="space-y-4 px-4">
+              <p
+                class="text-3xl lg:text-6xl font-extrabold text-white lg:w-[30rem]"
+              >
+                Join Our Forum
+              </p>
+              <p class="text-sm text-[#FFFFFFCC] lg:w-3/4">
+                Share your favorite opinion and win and wp forum coffee mug!
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+              <button
+                id="search-button"
+                class="bg-[#797DFC] text-white py-2 px-6 text-lg font-bold rounded-full duration-500 hover:bg-[#FFFFFFCC] hover:text-[#797DFC]"
+              >
+                Registered Now
+              </button>
+            </div>
+            <!--left side end================-->
+          </div>
+        </div>
+      </section>
+      <!--join our forum section end=========================================================-->
+
+      <!--Latest Posts section start============================================================-->
+      <section class="my-24">
+        <p class="text-5xl font-extrabold text-[#12132D] text-center mb-5">
+          Latest Posts
+        </p>
+        <p class="text-sm text-[#12132D99] lg:w-3/5 text-center mx-auto mb-10">
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+        <!--latest-post container star======================================-->
+        <div id="latest-container" class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+        </div>
+        <!--latest-post container end ======================================-->
+      </section>
+      <!--Latest Posts section end============================================================-->
     </main>
     <footer>
-
+     
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
