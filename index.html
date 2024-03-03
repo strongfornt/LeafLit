@@ -10,23 +10,23 @@
 
 </head>
 <body>
-    <header class="container px-4 lg:px-16 mt-5">
+    <header class="container px-4 lg:px-16 mt-3">
         <!--navbar start=======================================================-->
         <div class="navbar bg-base-100">
             <div class="flex-1">
               <a class="btn btn-ghost text-2xl font-bold">ReTro</a>
             </div>
             <div class="flex gap-4">
-                <div class="tooltip bg-[#0307121A] cursor-pointer p-2 rounded-full " data-tip="Home">
+                <div class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full " data-tip="Home">
                     <img class="w-5 " src="images/home.png" alt="">
                   </div>
-                  <div class="tooltip bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Note">
+                  <div class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Note">
                     <img class="w-5 " src="images/note.png" alt="">
                   </div>
-                  <div class="tooltip bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Contact">
+                  <div class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Contact">
                     <img class="w-5 " src="images/contact.png" alt="">
                   </div>
-                  <div class="tooltip bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Flag">
+                  <div class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full" data-tip="Flag">
                     <img class="w-5 " src="images/flag.png" alt="">
                   </div>
                 <button class="btn bg-[#797DFC] text-white font-semibold">Sign In</button>
@@ -36,7 +36,7 @@
     </header>
     <main class="container px-4 lg:px-16">
         <!--banner section start======================================================-->
-        <section class="my-6">
+        <section class="my-7">
             <div class="bg-[url('./images/bgbanner.png')] min-h-[90vh] bg-no-repeat bg-bottom rounded-xl bg-[#12132D]">
               <!--container=======================-->
                <div class="flex flex-col lg:flex-row justify-evenly items-center h-screen ">
@@ -70,10 +70,17 @@
             <p class="text-sm text-[#12132D99] lg:w-3/5  text-center mx-auto mb-10">
                 Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .
             </p>
+            
+            <div id="spinner1" class="flex items-center   lg:w-3/4 justify-center hidden">
+              <span class="loading loading-dots loading-lg "></span>
+            </div>
+            <!-- <div id="no-data" class=" flex items-center w-3/4 justify-center hidden "><p class="text-4xl font-bold">No data Available</p></div> -->
             <!--dynamic card container========================================-->
             <div class="flex gap-10 flex-col lg:flex-row">
+             
+
               <!--append div==========================================-->
-              <div id="card-container" class="flex-1">
+              <div id="card-container" class="flex-1 ">
                           <!--left side card start===================================-->
                           <!-- <div class="card card-side bg-[#797DFC] shadow-xl flex flex-col lg:flex-row  p-8 gap-2">
                             <div class="avatar w-16 h-16 rounded-full relative ">
@@ -112,7 +119,10 @@
                              </div>
                               </div>
                             </div> -->
+             
+              
               </div>
+            
                 <!--left side card end======================================-->
                 <!--right side output start =================================-->
                <div>
@@ -143,6 +153,7 @@
                </div>
                 <!--right side output end=========================================-->
             </div>
+           
          </section>
         <!--Let’s Discuss section end=========================================================-->
     </main>

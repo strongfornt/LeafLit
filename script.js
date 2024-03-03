@@ -1,13 +1,19 @@
 const cardContainer = document.getElementById('card-container');
+const noData = document.getElementById('no-data')
+console.log(noData);
+const loadSpinner = document.getElementById('spinner1');
 
 
 //all data load for lets disc section=========
 
+
 const allData = async() =>{
-    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts`);
+  const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts`);
     const data = await res.json();
     const {posts} = data;
-    cardContainer.innerText='';
+    console.log(posts.length);
+  
+    // cardContainer.innerText='';
     posts.forEach(post => {
         // console.log(post.comment_count);
         const div = document.createElement('div');
@@ -47,7 +53,7 @@ const allData = async() =>{
          </div>
          <!--right side icon start ====================================================-->
          <div class="mt-2 lg:mt-0  rounded-full">
-          <img onClick="massageButton('${post.title}', ${post.view_count})" id="massage-icon" class="bg-white rounded-full cursor-pointer" src="images/email.png" alt="">
+          <img onClick="massageButton(&quot;${post.title}&quot;, ${post.view_count})" id="massage-icon" class="bg-white rounded-full cursor-pointer" src="images/email.png" alt="">
          </div>
          <!--right side icon  end======================================================-->
          </div>
@@ -59,14 +65,23 @@ const allData = async() =>{
        
         cardContainer.appendChild(div)
     });
+    loadingSpinner(false)
+  
 }
-allData()
+
+
 
 //fetch by category
 const fetchByCategory = async(categoryName) =>{
   const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${categoryName}`);
   const data = await res.json();
   const {posts} = data;
+  if(posts.length === 0){
+    console.log("hi");
+    noData.classList.remove('hidden')
+    console.log(noData);
+  }
+
   cardContainer.innerHTML='';
   posts.forEach(post => {
       // console.log(post.comment_count);
@@ -119,17 +134,25 @@ const fetchByCategory = async(categoryName) =>{
      
       cardContainer.appendChild(div)
   });
+  // if(posts.length >1){
+  //   noData.classList.add('hidden');
+  //   console.log("hellfado");
+  //   console.log(noData);
+  // }
+  loadingSpinner(false)
 }
-fetchByCategory()
+
 //using search bar for get data======================================
 const searchButton = document.getElementById('search-button');
 searchButton.addEventListener('click',()=>{
-  console.log("hi");
+loadingSpinner(true)
   const searchField = document.getElementById('search-field');
   const searchFieldText = searchField.value;
-  // console.log(searchFieldText);
-  fetchByCategory(searchFieldText)
+  setTimeout(() => {
+    fetchByCategory(searchFieldText);
+  }, 2000);
   searchField.value="";
+ 
 })
 
 //title-container================================================
@@ -159,3 +182,33 @@ const massageButton = (title,view_count) =>{
   
 }
 
+//load spinner============================
+const loadingSpinner = (isLoading) => {
+console.log(isLoading);
+  if(isLoading){
+    loadSpinner.classList.remove('hidden');
+    
+    
+  }else{
+    loadSpinner.classList.add('hidden');
+    
+    
+  }
+}
+
+
+// if(post){
+//   console.log("hi");
+//   noData.classList.remove('hidden')
+// }else{
+//   noData.classList.add('hidden');
+//   console.log("hello");
+// }
+const callAllData = () =>{
+  loadingSpinner(true)
+  setTimeout(() => {
+    allData()
+  },2000);
+
+}
+callAllData()
