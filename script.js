@@ -20,9 +20,9 @@ const allData = async () => {
 
     div.className = `mb-5  rounded-2xl`;
     div.innerHTML = `
-        <div class="card card-side  shadow-xl flex   p-8 gap-2 ${post.category=='Music'?'bg-[#7D7DFC1A] border border-[#797DFC]':'bg-[#F3F3F5]'} ">
-        <div class="avatar w-16 h-16 rounded-full relative ">
-          <div class="w-16 h-16 rounded-xl">
+        <div class="card card-side  shadow-xl flex flex-col  lg:flex-row   p-8 gap-2 ${post.category=='Music'?'bg-[#7D7DFC1A] border border-[#797DFC]':'bg-[#F3F3F5]'} ">
+        <div class="avatar w-16   h-16 rounded-full relative ">
+          <div class="w-16 h-16 rounded-xl flex justify-center ">
             <img class="w-5 h-5" src="${post.image}" />
           
           </div>
@@ -34,7 +34,7 @@ const allData = async () => {
             
           
         </div>
-          <div class="w-full">
+          <div class="w-full ">
             <div class="space-y-2 mb-3">
               <div class="flex gap-4">
                 <p class="text-sm text-[#12132DCC]"># <span>${
@@ -103,7 +103,7 @@ const fetchByCategory = async (categoryName) => {
 
     div.className = `mb-5  rounded-2xl`;
     div.innerHTML = `
-      <div class="card card-side  shadow-xl flex   p-8 gap-2 ${post.category=='Music'?'bg-[#7D7DFC1A] border border-[#797DFC]':'bg-[#F3F3F5]'} ">
+      <div class="card card-side  shadow-xl flex flex-col lg:flex-row  p-8 gap-2 ${post.category=='Music'?'bg-[#7D7DFC1A] border border-[#797DFC]':'bg-[#F3F3F5]'} ">
       <div class="avatar w-16 h-16 rounded-full relative ">
         <div class="w-16 h-16 rounded-xl">
           <img class="w-5 h-5" src="${post.image}" />
