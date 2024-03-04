@@ -20,7 +20,7 @@ const allData = async () => {
 
     div.className = `mb-5  rounded-2xl`;
     div.innerHTML = `
-        <div class="card card-side  shadow-xl flex   p-8 gap-2 bg-[#F3F3F5] ">
+        <div class="card card-side  shadow-xl flex   p-8 gap-2 ${post.category=='Music'?'bg-[#7D7DFC1A] border border-[#797DFC]':'bg-[#F3F3F5]'} ">
         <div class="avatar w-16 h-16 rounded-full relative ">
           <div class="w-16 h-16 rounded-full">
             <img class="w-5 h-5" src="${post.image}" />
@@ -98,7 +98,7 @@ const fetchByCategory = async (categoryName) => {
 
     div.className = `mb-5  rounded-2xl`;
     div.innerHTML = `
-      <div class="card card-side  shadow-xl flex   p-8 gap-2 bg-[#F3F3F5] ">
+      <div class="card card-side  shadow-xl flex   p-8 gap-2 ${post.category=='Music'?'bg-[#7D7DFC1A] border border-[#797DFC]':'bg-[#F3F3F5]'} ">
       <div class="avatar w-16 h-16 rounded-full relative ">
         <div class="w-16 h-16 rounded-full">
           <img class="w-5 h-5" src="${post.image}" />
