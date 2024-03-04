@@ -165,10 +165,17 @@
           id="spinner1"
           class="flex items-center lg:w-3/4 lg:translate-y-14 justify-center hidden"
         >
-          <span class="loading loading-dots loading-lg"></span>
+          <span class="loading loading-bars text-neutral loading-xs"></span>
+          <span class="loading loading-bars text-accent loading-sm"></span>
+          <span class="loading loading-bars text-info loading-md"></span>
+          <span class="loading loading-bars text-error loading-lg"></span>
         </div>
         <!--spinner end===========================================-->
-        <div id="not-found" class=" flex  items-center w-full lg:w-3/4 justify-center lg:translate-y-16 hidden "><p class="text-4xl font-bold text-center">No data found 😔</p></div>
+        <!--not found title start here======================-->
+        <div id="not-found" class=" flex  items-center w-full lg:w-3/4 justify-center lg:translate-y-16 hidden ">
+          <p class="text-4xl font-bold text-center">No data found 😔</p>
+        </div>
+        <!--not found title end ======================================-->
         <!--dynamic card container========================================-->
         <div class="flex gap-10 flex-col lg:flex-row">
           <!--append div==========================================-->
@@ -292,7 +299,12 @@
         </p>
         <!--latest-post container star======================================-->
          <!--spinner start====================================-->
-        
+        <div id="spinnerTwo" class="flex justify-center hidden">
+          <span class="loading loading-bars text-neutral loading-xs"></span>
+          <span class="loading loading-bars text-accent loading-sm"></span>
+          <span class="loading loading-bars text-info loading-md"></span>
+          <span class="loading loading-bars text-error loading-lg"></span>
+        </div>
        <!--spinner end===========================================-->
        
         <div id="latest-container" class="grid grid-cols-1 lg:grid-cols-3 gap-4">

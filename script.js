@@ -2,7 +2,7 @@ const cardContainer = document.getElementById("card-container");
 const notFoundData = document.getElementById("not-found");
 
 const loadSpinner = document.getElementById("spinner1");
-const loadSpinner2 = document.getElementById('spinner2')
+const loadSpinnerTwo = document.getElementById('spinnerTwo');
 
 //all data load for lets disc section=========
 
@@ -268,19 +268,26 @@ data.forEach(element => {
   `;
   latestContainer.appendChild(div)
 });
-
+loadingSpinnerTwo(false);
 }
-fetchLatest()
+
 //fetch latest post data end==================================
+
 //loading spinner2
+const loadingSpinnerTwo = (isLoadingTwo) =>{
+  if(isLoadingTwo){
+    loadSpinnerTwo.classList.remove('hidden')
+  }else{
+    loadSpinnerTwo.classList.add('hidden')
+  }
+}
 
-
-// const callLAtestPost = () =>{
-//   loadingSpinner(true)
-//   setTimeout(() => {
-//     fetchLatest()
-//   }, 2000);
-// }
-// callLAtestPost()
+const callLAtestPost = () =>{
+  loadingSpinnerTwo(true)
+  setTimeout(() => {
+    fetchLatest()
+  }, 2000);
+}
+callLAtestPost()
 
 
