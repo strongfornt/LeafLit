@@ -2,6 +2,7 @@ const cardContainer = document.getElementById("card-container");
 const noData = document.getElementById("no-data");
 
 const loadSpinner = document.getElementById("spinner1");
+const loadSpinner2 = document.getElementById('spinner2')
 
 //all data load for lets disc section=========
 
@@ -97,7 +98,7 @@ const fetchByCategory = async (categoryName) => {
 
     div.className = `mb-5  rounded-2xl`;
     div.innerHTML = `
-      <div class="card card-side  shadow-xl flex flex-col lg:flex-row  p-8 gap-2 bg-[#F3F3F5] ">
+      <div class="card card-side  shadow-xl flex   p-8 gap-2 bg-[#F3F3F5] ">
       <div class="avatar w-16 h-16 rounded-full relative ">
         <div class="w-16 h-16 rounded-full">
           <img class="w-5 h-5" src="${post.image}" />
@@ -142,7 +143,7 @@ const fetchByCategory = async (categoryName) => {
           <!--left side icon end========================================================-->
        </div>
        <!--right side icon start ====================================================-->
-       <div class="mt-2 lg:mt-0  rounded-full">
+       <div class="mt-2 lg:mt-0 flex justify-end rounded-full">
         <img onClick="massageButton(&quot;${post.title}&quot;, ${
       post.view_count
     })" id="massage-icon" class="bg-white rounded-full cursor-pointer" src="images/email.png" alt="">
@@ -199,6 +200,7 @@ const massageButton = (title, view_count) => {
 
 //load spinner============================
 const loadingSpinner = (isLoading) => {
+
   if (isLoading) {
     loadSpinner.classList.remove("hidden");
     cardContainer.innerText=""
@@ -258,7 +260,28 @@ data.forEach(element => {
   `;
   latestContainer.appendChild(div)
 });
+// loadingSpinner2(false);
 }
 fetchLatest()
 //fetch latest post data end==================================
+// //loading spinner2
+// const loadingSpinner2 = (isLoading) => {
+//   console.log(isLoading);
+//   if (isLoading) {
+//     loadSpinner.classList.remove("hidden");
+    
+//   } else {
+//     loadSpinner.classList.add("hidden");
+//   }
+// };
+
+// console.log(loadSpinner2.innerHTML);
+// const callLAtestPost = () =>{
+//   loadingSpinner2(true)
+//   setTimeout(() => {
+//     fetchLatest()
+//   }, 2000);
+// }
+// callLAtestPost()
+
 
