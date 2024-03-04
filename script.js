@@ -22,14 +22,14 @@ const allData = async () => {
     div.innerHTML = `
         <div class="card card-side  shadow-xl flex   p-8 gap-2 ${post.category=='Music'?'bg-[#7D7DFC1A] border border-[#797DFC]':'bg-[#F3F3F5]'} ">
         <div class="avatar w-16 h-16 rounded-full relative ">
-          <div class="w-16 h-16 rounded-full">
+          <div class="w-16 h-16 rounded-xl">
             <img class="w-5 h-5" src="${post.image}" />
           
           </div>
           ${
             post.isActive
-              ? '<p class="bg-[#10B981] rounded-full w-3 h-3 absolute left-12 top-1 "></p>'
-              : '<p class="bg-[#FF3434] rounded-full w-3 h-3 absolute left-12 top-1 "></p>'
+              ? '<p class="bg-[#10B981] rounded-full w-3 h-3 absolute left-14 -top-0.5 "></p>'
+              : '<p class="bg-[#FF3434] rounded-full w-3 h-3 absolute left-14 -top-0.5 "></p>'
           }
             
           
@@ -100,14 +100,14 @@ const fetchByCategory = async (categoryName) => {
     div.innerHTML = `
       <div class="card card-side  shadow-xl flex   p-8 gap-2 ${post.category=='Music'?'bg-[#7D7DFC1A] border border-[#797DFC]':'bg-[#F3F3F5]'} ">
       <div class="avatar w-16 h-16 rounded-full relative ">
-        <div class="w-16 h-16 rounded-full">
+        <div class="w-16 h-16 rounded-xl">
           <img class="w-5 h-5" src="${post.image}" />
         
         </div>
         ${
           post.isActive
-            ? '<p class="bg-[#10B981] rounded-full w-3 h-3 absolute left-12 top-1 "></p>'
-            : '<p class="bg-[#FF3434] rounded-full w-3 h-3 absolute left-12 top-1 "></p>'
+            ? '<p class="bg-[#10B981] rounded-full w-3 h-3 absolute left-14 -top-0.5 "></p>'
+            : '<p class="bg-[#FF3434] rounded-full w-3 h-3 absolute left-14 -top-0.5"></p>'
         }
           
         
