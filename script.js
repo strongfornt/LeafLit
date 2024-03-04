@@ -1,5 +1,5 @@
 const cardContainer = document.getElementById("card-container");
-const noData = document.getElementById("no-data");
+const notFoundData = document.getElementById("not-found");
 
 const loadSpinner = document.getElementById("spinner1");
 const loadSpinner2 = document.getElementById('spinner2')
@@ -90,9 +90,14 @@ const fetchByCategory = async (categoryName) => {
   );
   const data = await res.json();
   const { posts } = data;
+  if(posts.length === 0){
+   
+    notFoundData.classList.remove('hidden')
+  }
 
   cardContainer.innerHTML = "";
   posts.forEach((post) => {
+    console.log(post);
     // console.log(post.comment_count);
     const div = document.createElement("div");
 
@@ -158,11 +163,15 @@ const fetchByCategory = async (categoryName) => {
   });
 
   loadingSpinner(false);
+  if(posts.length > 0){
+    notFoundData.classList.add('hidden')
+  }
 };
 
 //using search bar for get data======================================
 const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", () => {
+  notFoundData.classList.add('hidden')
   loadingSpinner(true);
   const searchField = document.getElementById("search-field");
   const searchFieldText = searchField.value;
@@ -200,7 +209,6 @@ const massageButton = (title, view_count) => {
 
 //load spinner============================
 const loadingSpinner = (isLoading) => {
-  console.log(isLoading);
   if (isLoading) {
     loadSpinner.classList.remove("hidden");
     cardContainer.innerText=""
