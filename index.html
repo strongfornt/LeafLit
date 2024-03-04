@@ -16,11 +16,60 @@
     <header class="container px-4 lg:px-16 mt-3">
       <!--navbar start=======================================================-->
       <div class="navbar bg-base-100">
-        <div class="flex-1">
-          <a class="btn btn-ghost text-4xl font-bold">LeafLit</a>
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white border border-[#12132D40] rounded-box  space-y-2">
+              <li>
+                <div
+                class="tooltip tooltip-right bg-[#0307121A] cursor-pointer p-2 rounded-full"
+                data-tip="Home"
+              >
+                <img class="w-5" src="images/home.png" alt="" />
+              </div>
+              </li>
+              <li>
+                <div
+                class="tooltip tooltip-right bg-[#0307121A] cursor-pointer p-2 rounded-full"
+                data-tip="Edit"
+              >
+                <img class="w-5" src="images/note.png" alt="" />
+              </div>
+              </li>
+              <li>
+                <div
+                class="tooltip tooltip-right bg-[#0307121A] cursor-pointer p-2 rounded-full"
+                data-tip="Add"
+              >
+                <img class="w-5" src="images/contact.png" alt="" />
+              </div>
+              </li>
+              <li>
+                <div
+                class="tooltip tooltip-right bg-[#0307121A] cursor-pointer p-2 rounded-full"
+                data-tip="Add"
+              >
+                <img class="w-5" src="images/contact.png" alt="" />
+              </div>
+              </li>
+              <li>
+                <div
+                class="tooltip tooltip-right bg-[#0307121A] cursor-pointer p-2 rounded-full"
+                data-tip="Flag"
+              >
+                <img class="w-5 " src="images/flag.png" alt="" />
+              </div>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-2xl lg:text-4xl font-bold">LeafLit</a>
         </div>
-        <div class="flex gap-4">
-          <div
+      <!--right side nav-->
+        <div class="flex gap-4 navbar-end">
+          <div class="hidden lg:flex gap-4 ">
+            <div
             class="tooltip tooltip-bottom bg-[#0307121A] cursor-pointer p-2 rounded-full"
             data-tip="Home"
           >
@@ -43,6 +92,7 @@
             data-tip="Flag"
           >
             <img class="w-5 " src="images/flag.png" alt="" />
+          </div>
           </div>
           <button class="btn bg-[#797DFC] text-white font-semibold">
             Sign In
