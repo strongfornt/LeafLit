@@ -200,7 +200,7 @@ const massageButton = (title, view_count) => {
 
 //load spinner============================
 const loadingSpinner = (isLoading) => {
-
+  console.log(isLoading);
   if (isLoading) {
     loadSpinner.classList.remove("hidden");
     cardContainer.innerText=""
@@ -260,24 +260,15 @@ data.forEach(element => {
   `;
   latestContainer.appendChild(div)
 });
-// loadingSpinner2(false);
+
 }
 fetchLatest()
 //fetch latest post data end==================================
-// //loading spinner2
-// const loadingSpinner2 = (isLoading) => {
-//   console.log(isLoading);
-//   if (isLoading) {
-//     loadSpinner.classList.remove("hidden");
-    
-//   } else {
-//     loadSpinner.classList.add("hidden");
-//   }
-// };
+//loading spinner2
 
-// console.log(loadSpinner2.innerHTML);
+
 // const callLAtestPost = () =>{
-//   loadingSpinner2(true)
+//   loadingSpinner(true)
 //   setTimeout(() => {
 //     fetchLatest()
 //   }, 2000);
